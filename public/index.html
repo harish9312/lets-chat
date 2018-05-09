@@ -27,9 +27,10 @@
   var socket = io();
   socket.on('chat', function (msg) {
     console.log('>> msg', msg);
-    const ul = document.getElementById('msg').appendChild(<li>{
-      msg
-    }</li>)
+    var node = document.createElement("LI");                 // Create a <li> node
+    var textnode = document.createTextNode(msg);         // Create a text node
+    node.appendChild(textnode);                              // Append the text to <li>
+    document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
   });
 </script>
 
