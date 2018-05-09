@@ -4,7 +4,7 @@ import logo from './logo.svg';
 
 import openSocket from 'socket.io-client';
 const port = process.env.PORT || 8080;
-const socket = openSocket(`https://lets-chat-harish.herokuapp.com:${port}`);
+const socket = openSocket(`https://lets-chat-harish.herokuapp.com`);
 
 
 interface IAppState {
