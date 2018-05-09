@@ -3,7 +3,8 @@ import './App.css';
 import logo from './logo.svg';
 
 import openSocket from 'socket.io-client';
-const socket = openSocket('http://localhost:3000');
+const port = process.env.PORT || 8080;
+const socket = openSocket(`https://lets-chat-harish.herokuapp.com:${port}`);
 
 
 interface IAppState {

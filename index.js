@@ -7,6 +7,7 @@ var io = require('socket.io')(http);
 
 app.use(express.static(path.join(__dirname, 'build')));
 var port = process.env.PORT || 8080;
+console.log('>> port', port);
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/build/index.html');
