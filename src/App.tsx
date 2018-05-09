@@ -1,19 +1,37 @@
 import * as React from 'react';
 import './App.css';
-
 import logo from './logo.svg';
 
-class App extends React.Component {
-  public render() {
+import openSocket from 'socket.io-client';
+const socket = openSocket('http://localhost:3000');
+
+
+interface IAppState {
+  inputValue: string;
+}
+
+class App extends React.Component<{}, IAppState> {
+  constructor(props) {
+    super(props)
+    this.state = { inputValue: '' }
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    socket.emit('chat', this.state.inputValue);
+  }
+
+  render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <ul id="msg">
+        </ul>
+        <form action="" onSubmit={this.handleSubmit} >
+          <input id="m" autoComplete="off" onChange={(e) => {
+            this.setState({ inputValue: e.target.value })
+          }} />
+          <button type="submit" >Send</button>
+        </form>
       </div>
     );
   }
