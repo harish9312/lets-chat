@@ -19,9 +19,10 @@ class App extends React.Component<{}, IAppState> {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log('>> socket', socket);
-    console.log('>> this.state.inputValue', this.state.inputValue);
     socket.emit('chat', this.state.inputValue);
+    this.setState({
+      inputValue: ''
+    })
   }
 
   render() {
