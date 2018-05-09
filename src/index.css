@@ -1,5 +1,24 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.login-container {
+    display: flex;
+    background-color: #ff8585;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-input {
+    border: 1px solid #46d5fb;
+    height: 32px;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.login-panel {
+    text-align: center;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 50px;
+    border-radius: 5px;
+    background-color: white;
 }

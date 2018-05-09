@@ -6,7 +6,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 app.use(express.static(path.join(__dirname, 'build')));
-var port = process.env.PORT || 8080;
+var port = 3000;
 console.log('>> port', port);
 
 app.get('/', function (req, res) {

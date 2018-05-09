@@ -1,28 +1,108 @@
 .App {
-  text-align: center;
+    text-align: center;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('Montserrat-Light.ttf');
+}
+
+body {
+    font-family: myFirstFont;
+    overflow: hidden;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
+}
+
+.message-container {
+    height: 80vh;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.chat-container {
+    display: flex;
+    padding: 14px;
+}
+
+.caret-sign {
+    width: 0px;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-bottom: 12px solid #53c376;
+    ;
+}
+
+form {
+    padding-top: 34px;
+    box-shadow: 0px -23px 104px #c1c1c1;
+    padding-bottom: 40px;
+    width: 102%
+}
+
+.message {
+    background-color: #53c376;
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    font-weight: bold;
+    border-top-left-radius: 0px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+    background-color: #27d4fd;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    box-shadow: 5px 2px 6px #c1c1c1;
+}
+
+textarea {
+    width: 80%;
+    border: none;
+    border-bottom: 3px solid #31bdff;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.username {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
 }
