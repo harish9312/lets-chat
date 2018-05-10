@@ -24,7 +24,7 @@ export class LoginScreen extends React.PureComponent<ILoginScreenProps, ILoginSc
         return <div className="login-container" >
             <div className="login-panel" >
                 <h2>Login to my</h2>
-                <img src="https://media.tenor.com/images/18b767b668c6cf5bbb1b7d2c062c8060/tenor.gif" />
+                {/* <img src="https://media.tenor.com/images/18b767b668c6cf5bbb1b7d2c062c8060/tenor.gif" /> */}
                 <div style={{ paddingBottom: '15px' }} >
                     < input
                         className="login-input"

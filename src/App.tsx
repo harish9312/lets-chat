@@ -5,8 +5,8 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import openSocket from 'socket.io-client';
-// const socket = openSocket(`http://localhost:3000`);
-const socket = openSocket(`https://lets-chat-harish.herokuapp.com`);
+const socket = openSocket(`http://localhost:3000`);
+// const socket = openSocket(`https://lets-chat-harish.herokuapp.com`);
 
 interface IAppProps {
   userName: string;
