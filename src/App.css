@@ -9,7 +9,6 @@
 
 body {
     font-family: myFirstFont;
-    overflow: hidden;
 }
 
 .App-logo {
@@ -33,7 +32,7 @@ body {
 }
 
 .message-container {
-    height: 80vh;
+    height: 75vh;
 }
 
 .avatar {
@@ -48,22 +47,34 @@ body {
     padding: 14px;
 }
 
-.caret-sign {
+.caret-sign-left {
     width: 0px;
     height: 0;
+    margin-bottom: -1px;
     border-right: 15px solid transparent;
     border-bottom: 12px solid #53c376;
-    ;
+}
+
+.caret-sign-right {
+    display: flex;
+    vertical-align: bottom;
+    width: 0;
+    float: right;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-bottom: 12px solid #53c376;
 }
 
 form {
     padding-top: 34px;
     box-shadow: 0px -23px 104px #c1c1c1;
     padding-bottom: 40px;
-    width: 102%
+    width: 102%;
+    bottom: 0;
+    position: fixed;
 }
 
-.message {
+.message-left {
     background-color: #53c376;
     color: white;
     font-size: 15px;
@@ -72,6 +83,18 @@ form {
     text-align: left;
     font-weight: bold;
     border-top-left-radius: 0px;
+}
+
+.message-right {
+    background-color: #53c376;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    font-weight: bold;
+    border-top-right-radius: 0px;
 }
 
 button {

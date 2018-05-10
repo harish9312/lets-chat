@@ -54,26 +54,32 @@
     imgContainer.appendChild(img)
 
     var chatContainer = document.createElement("div");
-    chatContainer.style.paddingLeft = '10px'
+    chatContainer.style.padding = '0px 10px'
 
     var userName = document.createElement("div");
     userName.className = 'username'
     userName.innerHTML = msgData.userName
 
     var caretSign = document.createElement("div");
-    caretSign.className = 'caret-sign'
+    caretSign.className = msgData.userName.toLowerCase() === 'harish' ? 'caret-sign-right' : 'caret-sign-left'
 
     var message = document.createElement("div");
-    message.className = 'message'
+    message.className = msgData.userName.toLowerCase() === 'harish' ? 'message-right' : 'message-left'
     var textnode = document.createTextNode(msgData.msg);
     message.appendChild(textnode);
 
     chatContainer.appendChild(userName)
     chatContainer.appendChild(caretSign)
     chatContainer.appendChild(message)
-
-    container.appendChild(imgContainer)
-    container.appendChild(chatContainer)
+    if (msgData.userName.toLowerCase() === 'harish') {
+      container.style.justifyContent = 'flex-end';
+      userName.style.textAlign = 'right';
+      container.appendChild(chatContainer)
+      container.appendChild(imgContainer)
+    } else {
+      container.appendChild(imgContainer)
+      container.appendChild(chatContainer)
+    }
 
     document.getElementById("msg").appendChild(container);     // Append <li> to <ul> with id="myList"
   });
