@@ -71,8 +71,6 @@ form {
     padding-bottom: 40px;
     width: 102%;
     bottom: 0;
-    position: fixed;
-    z-index: 10000;
 }
 
 .message-left {
